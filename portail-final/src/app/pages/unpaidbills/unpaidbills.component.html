@@ -1,0 +1,94 @@
+<app-sidenav activePage="2"></app-sidenav>
+
+<div
+  class="min-height-300 position-absolute w-100"
+  style="background-color: #2dce89"
+></div>
+
+<main class="main-content position-relative border-radius-lg">
+  <div class="container-fluid py-4">
+    <br />
+    <div class="row" style="margin-left: 18rem">
+      <div class="col-12">
+        <div class="card mb-4">
+          <div class="card-header pb-0">
+            <h6>Unpaid bills</h6>
+          </div>
+          <div class="card-body px-0 pt-0 pb-2">
+            <div class="table-responsive p-0">
+              <table class="table align-items-center mb-0">
+                <thead>
+                  <tr>
+                    <th
+                      class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
+                    >
+                      Contract
+                    </th>
+                    <th
+                      class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2"
+                    >
+                      Client
+                    </th>
+                    <th
+                      class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
+                    >
+                      Period
+                    </th>
+
+                    <th
+                      class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
+                    >
+                      Deadline
+                    </th>
+
+                    <th
+                      class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
+                    >
+                      Price
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let bill of unpaidBills">
+                    <td>
+                      <div class="d-flex px-2 py-1">
+                        <div class="d-flex flex-column justify-content-center">
+                          <h6 class="mb-0 text-sm">{{ bill.contract }}</h6>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <p class="text-xs font-weight-bold mb-0">
+                        {{ bill.client }}
+                      </p>
+                    </td>
+                    <td class="align-middle text-center text-sm">
+                      <p class="text-xs font-weight-bold mb-0">
+                        {{ bill.periode }}
+                      </p>
+                    </td>
+                    <td class="align-middle text-center">
+                      <p class="text-xs font-weight-bold mb-0">
+                        {{ bill.deadline }}
+                      </p>
+                    </td>
+                    <td class="align-middle text-center">
+                      <p class="text-xs font-weight-bold mb-0">
+                        {{ bill.price }} TND
+                      </p>
+                    </td>
+                    <td class="align-middle text-center text-sm">
+                      <span class="badge badge-sm bg-gradient-success"
+                        >Pay</span
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

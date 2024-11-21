@@ -1,0 +1,31 @@
+# Node modules
+node_modules/
+
+# Angular build output
+/dist/
+/out-tsc/
+
+# Angular environment configuration files
+/src/environments/environment.prod.ts
+/src/environments/environment.ts
+
+# npm logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# TypeScript cache
+*.tsbuildinfo
+
+# IDE-specific files
+.vscode/
+.idea/
+
+# MacOS system files
+.DS_Store
+
+# Linux system files
+*.swp
+
+# Windows system files
+Thumbs.db
